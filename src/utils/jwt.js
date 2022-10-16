@@ -12,7 +12,7 @@ const JWTManager = () => {
         inMemoryToken = accessToken;
         // decode and set countdown to refresh
         const decoded = jwtDecode(accessToken);
-        userId = decoded.userId;
+        userId = decoded._id;
         setRefreshTokenTimeOut(Number(decoded.exp) - Number(decoded.iat));
         return true;
     };

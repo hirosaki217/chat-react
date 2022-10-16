@@ -1,0 +1,31 @@
+.loginPage {
+    background-image: url('../../../public/images/login_background.jpg');
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.frame {
+    height: 700px;
+    background: #fff;
+    width: 500px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.wrapImage {
+    height: 100px;
+}
+.wrapper {
+    width: 100%;
+    margin: 15px 0;
+}
+
+.inputField {
+    height: 50px;
+    width: 100%;
+
+    border-radius: 5px;
+    font-size: 15px;
+    padding-left: 10px;
+}
