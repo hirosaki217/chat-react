@@ -1,6 +1,7 @@
 import { createContext, useContext, useState } from 'react';
 import JWTManager from '../utils/jwt';
-
+import axios from 'axios';
+import jwt from '../utils/jwt';
 const defaultIsAuthenticated = false;
 
 export const AuthContext = createContext({
@@ -19,8 +20,10 @@ const AuthContextProvider = ({ children }) => {
 
     const checkAuth = async () => {
         const token = JWTManager.getToken();
-        if (token) setIsAuthenticatied(true);
-        else {
+        if (token) {
+            console.log(token);
+            setIsAuthenticatied(true);
+        } else {
             const success = await JWTManager.getRefreshToken();
             if (success) setIsAuthenticatied(true);
         }

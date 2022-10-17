@@ -1,3 +1,4 @@
+import jwt from '../utils/jwt';
 import axios from './axiousClient';
 
 const userApi = {
@@ -6,6 +7,9 @@ const userApi = {
     },
     logout: async () => {
         return await axios.post('http://localhost:4000/auth/logout', {}, { withCredentials: true });
+    },
+    getList: async () => {
+        return await axios.get('http://localhost:4000/friends', {}, { withCredentials: true });
     },
 };
 

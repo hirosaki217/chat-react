@@ -10,6 +10,7 @@ const JWTManager = () => {
 
     const setToken = (accessToken) => {
         inMemoryToken = accessToken;
+        localStorage.setItem('token', accessToken);
         // decode and set countdown to refresh
         const decoded = jwtDecode(accessToken);
         userId = decoded._id;
